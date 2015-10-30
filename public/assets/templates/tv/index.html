@@ -1,0 +1,21 @@
+<header>
+	<h1>TV Index</h1>
+</header>
+
+<div class="row">
+	<div ng-repeat="tv in tvs" class="col-sm-4">
+		<h2>{{tv.title}}</h2>
+		<img src="{{tv.img_src}}" class="img-responsive" alt="TV Show Image"/>
+		<h3>{{tv.genre}}</h3>
+		<h3>{{tv.channel}}</h3>
+		<div>
+			<h4>Musings</h4>
+			<ul ng-repeat="musing in tv.musings">
+				<li>
+					<p>"{{musing.content}}"</p>
+					<p>{{musing.name}} - {{musing.date}}</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
