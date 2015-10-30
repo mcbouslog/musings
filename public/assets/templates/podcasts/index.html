@@ -1,0 +1,12 @@
+<header>
+	<h1>Podcast Index</h1>
+	<a class="btn btn-default" href="#/podcasts/new">New Podcast Entry</a>
+</header>
+
+<div class="row">
+	<div ng-repeat="podcast in podcasts" class="col-sm-4">
+		<div>
+			<mm-index item="podcast"></mm-index>
+		</div>
+	</div>
+</div>

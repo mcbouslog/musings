@@ -1,1 +1,26 @@
-<h1>TV New</h1>
+<header>
+	<h1>New TV Entry</h1>
+</header>
+
+<div class="row">
+	<div class="col-sm-8">
+		<form>
+			<fieldset class="form-group">
+		    <label for="title">Title</label>
+		    <input class="form-control" type="text" id="title" name="title" ng-model="tv.title">
+		  </fieldset>
+
+		  <fieldset class="form-group">
+		    <label for="genre">Genre</label>
+		    <input class="form-control" type="text" id="genre" name="genre" ng-model="tv.genre">
+		  </fieldset>
+
+		  <fieldset class="form-group">
+		    <label for="channel">Channel</label>
+		    <input class="form-control" type="text" id="channel" name="channel" ng-model="tv.channel">
+		  </fieldset>
+
+		  <input type="submit" value="{{isSubmitting ? 'saving...' : 'Save'}}" class="btn btn-default" ng-click="saveTV(tv)" ng-disabled="isSubmitting">
+		</form>
+	</div>
+</div>

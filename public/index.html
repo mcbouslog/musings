@@ -4,6 +4,7 @@
 		<title>Mark's Musings</title>
 		<link rel="stylesheet" href="assets/styles/bootstrap.css"></link>
 	  <link rel="stylesheet" href="assets/styles/bootstrap-theme.css"></link>
+	  <link rel="stylesheet" href="assets/styles/stylesheet.css"></link>
 	</head>
 
 	<body>
@@ -15,12 +16,14 @@
             <a href="/#/">Mark's Musings</a>
           </div>
         </div>
-        <!-- <nw-page-nav></nw-page-nav> -->
+        <ul class="nav navbar-nav navbar-right">
+				  <li ng-class="{'active': isPage('all')}"><a href="#/all">All</a></li>
+				  <li ng-class="{'active': isPage('tv')}"><a href="#/tv">TV</a></li>
+				  <li ng-class="{'active': isPage('podcasts')}"><a href="#/podcasts">Podcasts</a></li>
+				</ul>
       </div>
     </nav>
-		
-		<p>Hello world!</p>
-		
+				
 		<main ng-view class="container-fluid"></main>
 		
 		<footer>
@@ -41,17 +44,23 @@
 	<script src="assets/javascript/routes.js"></script>
 
 	<!-- Directives -->
-
+	<script src="assets/javascript/directives/mmIndex.js"></script>
 
 	<!-- Controllers -->
+	<script src="assets/javascript/controllers/allIndexController.js"></script>
 	<script src="assets/javascript/controllers/tvIndexController.js"></script>
 	<script src="assets/javascript/controllers/tvShowController.js"></script>
 	<script src="assets/javascript/controllers/tvCreateController.js"></script>
+	<script src="assets/javascript/controllers/podcastsIndexController.js"></script>
+	<script src="assets/javascript/controllers/podcastsShowController.js"></script>
+	<script src="assets/javascript/controllers/podcastsCreateController.js"></script>
+
 
 	<!-- Filters -->
 
 
 	<!-- Services -->
 	<script src="assets/javascript/services/tv.js"></script>
+	<script src="assets/javascript/services/podcast.js"></script>
 
 </html>

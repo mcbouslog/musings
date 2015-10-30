@@ -1,0 +1,16 @@
+<section class="index-card">
+	<h2><a ng-href="#{{item.group}}/{{item.id}}">{{item.title}}</a></h2>
+	<img src="{{item.img_src}}" class="img-responsive" alt="Responsive Image"/>
+	<h3>{{item.genre}}</h3>
+	<h3>{{item.channel}}</h3>
+	<br />
+	<div>
+		<h4>Musings</h4>
+		<ul ng-repeat="musing in item.musings">
+			<li>
+				<p>"{{musing.content}}"</p>
+				<p>{{musing.name}} - {{musing.date}}</p>
+			</li>
+		</ul>
+	</div>
+</section>

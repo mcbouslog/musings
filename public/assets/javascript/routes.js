@@ -1,7 +1,12 @@
 angular.module('MarkMusings').config(function($routeProvider){
   $routeProvider
     .when('/', {
-      redirectTo: '/tv'
+      redirectTo: '/all'
+    })
+
+    .when('/all', {
+      templateUrl: "assets/templates/all.html",
+      controller: "AllIndexController"
     })
 
     .when('/tv', {
@@ -19,19 +24,19 @@ angular.module('MarkMusings').config(function($routeProvider){
       controller: "TVShowController"
     })
 
-    .when('/movies', {
-      templateUrl: "assets/templates/movies/index.html",
-      controller: "MoviesIndexController"
-    })
-
     .when('/podcasts', {
       templateUrl: "assets/templates/podcasts/index.html",
-      controller: "PodcastsController"
+      controller: "PodcastsIndexController"
     })
 
-    .when('/food', {
-      templateUrl: "assets/templates/food/index.html",
-      controller: "FoodController"
+    .when('/podcasts/new', {
+      templateUrl: "assets/templates/podcasts/new.html",
+      controller: "PodcastsCreateController"
+    })
+
+    .when('/podcasts/:id', {
+      templateUrl: "assets/templates/podcasts/show.html",
+      controller: "PodcastsShowController"
     })
 
 });

@@ -1,0 +1,11 @@
+<header>
+	<h1>All Items Index</h1>
+</header>
+
+<div>
+	<div ng-repeat="item in allItems | orderBy: 'title'" class="col-sm-4">
+		<div class="row">
+			<mm-index item="item"></mm-index>
+		</div>
+	</div>
+</div>
