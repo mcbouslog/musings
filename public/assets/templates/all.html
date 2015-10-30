@@ -3,9 +3,14 @@
 </header>
 
 <div>
-	<div ng-repeat="item in allItems | orderBy: 'title'" class="col-sm-4">
+	<div ng-repeat="tv in tvs | orderBy: 'title'" class="col-sm-4">
 		<div class="row">
-			<mm-index item="item"></mm-index>
+			<mm-index item="tv"></mm-index>
+		</div>
+	</div>
+	<div ng-repeat="podcast in podcasts | orderBy: 'title'" class="col-sm-4">
+		<div class="row">
+			<mm-index item="podcast"></mm-index>
 		</div>
 	</div>
 </div>
